@@ -75,10 +75,10 @@ def projects_overall(grades):
 
 
 def lateness_penalty(col):
-    td = pd.to_timedelta(late_series)
+    td = pd.to_timedelta(col)
     hours = td.dt.total_seconds() / 3600
 
-    penalties = pd.Series(0.4, index=late_series.index)
+    penalties = pd.Series(0.4, index=col.index)
     penalties[hours <= 336] = 0.7
     penalties[hours <= 168] = 0.9
     penalties[hours <= 2] = 1.0
@@ -175,7 +175,7 @@ def total_points(grades):
 
 def final_grades(total):
     return pd.cut(
-        scores,
+        total,
         bins=[-np.inf, 0.6, 0.7, 0.8, 0.9, np.inf],
         labels=['F', 'D', 'C', 'B', 'A'],
         right=False
