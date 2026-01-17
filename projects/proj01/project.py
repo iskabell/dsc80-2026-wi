@@ -75,18 +75,15 @@ def projects_overall(grades):
 
 
 def lateness_penalty(col):
-    td = pd.to_timedelta(lateness)
-    
-    hours_late = td.dt.total_seconds() / 3600
-    
-    penalties = pd.Series(0.4, index=lateness.index)
+    td = pd.to_timedelta(late_series)
+    hours = td.dt.total_seconds() / 3600
 
-    penalties[hours_late <= 336] = 0.7
-    penalties[hours_late <= 168] = 0.9
-    penalties[hours_late <= 2] = 1.0
-    
+    penalties = pd.Series(0.4, index=late_series.index)
+    penalties[hours <= 336] = 0.7
+    penalties[hours <= 168] = 0.9
+    penalties[hours <= 2] = 1.0
+
     return penalties
-
 
 # ---------------------------------------------------------------------
 # QUESTION 4
@@ -94,8 +91,17 @@ def lateness_penalty(col):
 
 
 def process_labs(grades):
-    sorted_labs = processed_labs.apply(np.sort, axis=1, result_type='expand')
-    return sorted_labs.iloc[:, 1:].mean(axis=1)
+    labs = get_assignment_names(grades)['lab']
+    out = pd.DataFrame(index=grades.index)
+
+    for lab in labs:
+        score = grades[lab].fillna(0)
+        max_pts = grades[f"{lab} - Max Points"].iloc[0]
+        penalty = lateness_penalty(grades[f"{lab} - Lateness (H:M:S)"])
+
+        out[lab] = (score / max_pts) * penalty
+
+    return out
 
 
 # ---------------------------------------------------------------------
@@ -104,9 +110,8 @@ def process_labs(grades):
 
 
 def labs_overall(processed):
-    sorted_labs = processed_labs.apply(np.sort, axis=1, result_type='expand')
+    sorted_labs = processed.apply(np.sort, axis=1, result_type='expand')
     return sorted_labs.iloc[:, 1:].mean(axis=1)
-
 
 # ---------------------------------------------------------------------
 # QUESTION 6
@@ -170,7 +175,7 @@ def total_points(grades):
 
 def final_grades(total):
     return pd.cut(
-        final_scores,
+        scores,
         bins=[-np.inf, 0.6, 0.7, 0.8, 0.9, np.inf],
         labels=['F', 'D', 'C', 'B', 'A'],
         right=False
