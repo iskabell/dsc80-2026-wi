@@ -155,7 +155,7 @@ def total_points(grades):
     final = grades['Final'].fillna(0)
     final_max = grades['Final - Max Points'].iloc[0]
     final_score = final / final_max
-\
+
     total = (
         0.20 * lab_score +
         0.30 * project_score +
@@ -181,11 +181,10 @@ def final_grades(total):
         right=False
     )
 def letter_proportions(total):
-    letters = final_grades(final_scores)
+    letters = final_grades(total)
     proportions = letters.value_counts(normalize=True)
     order = ['B', 'C', 'A', 'D', 'F']
-    
-    return proportions.reindex(order).dropna()
+    return proportions.reindex(order).fillna(0)
 
 
 # ---------------------------------------------------------------------
@@ -194,19 +193,18 @@ def letter_proportions(total):
 
 
 def raw_redemption(final_breakdown, question_numbers):
-    scores = final_breakdown.iloc[:, redemption_questions]
-    max_scores = scores.max()
-    earned = scores.sum(axis=1)
-    possible = max_scores.sum()
-    raw = earned / possible
-    raw = raw.fillna(0)
+    cols = [f"Question {q}" for q in question_numbers]
+    earned = final_breakdown[cols].sum(axis=1)
+    possible = final_breakdown[cols].max().sum()
+    raw = (earned / possible).fillna(0)
+
     return pd.DataFrame({
         'PID': final_breakdown['PID'],
         'Raw Redemption Score': raw
     })
     
 def combine_grades(grades, raw_redemption_scores):
-    return grades.merge(redemption_df, on='PID', how='left').fillna({'Raw Redemption Score': 0})
+    return grades.merge(raw_redemption_scores, on='PID', how='left').fillna({'Raw Redemption Score': 0})
 
 
 # ---------------------------------------------------------------------
@@ -354,15 +352,14 @@ def letter_grade_heat_map(grades_analysis):
 
     fig = px.imshow(
         heat_df,
-        color_continuous_scale='Viridis',
+        color_continuous_scale='Blues',
         title='Distribution of Letter Grades by Section'
     )
 
     fig.update_layout(
-        font=dict(
-            family='Impact',
-            size=14
-        )
+        font=dict(family='Impact', size=14),
+        yaxis_title='Letter Grade Post-Redemption',
+        xaxis_title='Section'
     )
 
     return fig
