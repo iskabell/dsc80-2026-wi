@@ -193,11 +193,12 @@ def letter_proportions(total):
 
 
 def raw_redemption(final_breakdown, question_numbers):
-    cols = [f"Question {q}" for q in question_numbers]
-    earned = final_breakdown[cols].sum(axis=1)
-    possible = final_breakdown[cols].max().sum()
-    raw = (earned / possible).fillna(0)
-
+    scores = final_breakdown.iloc[:, question_numbers]
+    max_scores = scores.max()
+    earned = scores.sum(axis=1)
+    possible = max_scores.sum()
+    raw = earned / possible
+    raw = raw.fillna(0)
     return pd.DataFrame({
         'PID': final_breakdown['PID'],
         'Raw Redemption Score': raw
@@ -205,7 +206,6 @@ def raw_redemption(final_breakdown, question_numbers):
     
 def combine_grades(grades, raw_redemption_scores):
     return grades.merge(raw_redemption_scores, on='PID', how='left').fillna({'Raw Redemption Score': 0})
-
 
 # ---------------------------------------------------------------------
 # QUESTION 9
@@ -352,14 +352,15 @@ def letter_grade_heat_map(grades_analysis):
 
     fig = px.imshow(
         heat_df,
-        color_continuous_scale='Blues',
+        color_continuous_scale='Viridis',
         title='Distribution of Letter Grades by Section'
     )
 
     fig.update_layout(
-        font=dict(family='Impact', size=14),
-        yaxis_title='Letter Grade Post-Redemption',
-        xaxis_title='Section'
+        font=dict(
+            family='Impact',
+            size=14
+        )
     )
 
     return fig
