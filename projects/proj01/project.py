@@ -249,18 +249,11 @@ def total_points_post_redemption(grades_combined):
     return base - 0.15 * df['Midterm Score Pre-Redemption'] + 0.15 * df['Midterm Score Post-Redemption']
         
 def proportion_improved(grades_combined):
-    pre_total = total_points(grades_combined)
-    post_total = total_points_post_redemption(grades_combined)
+    pre = final_grades(total_points(grades_combined))
+    post = final_grades(total_points_post_redemption(grades_combined))
 
-    pre_letters = final_grades(pre_total).astype(str)
-    post_letters = final_grades(post_total).astype(str)
-
-    order = {'F': 0, 'D': 1, 'C': 2, 'B': 3, 'A': 4}
-
-    pre_num = pre_letters.map(order)
-    post_num = post_letters.map(order)
-
-    return (post_num > pre_num).fillna(False).mean()
+    improved = post.cat.codes > pre.cat.codes
+    return improved.mean()
 
 
 # ---------------------------------------------------------------------
