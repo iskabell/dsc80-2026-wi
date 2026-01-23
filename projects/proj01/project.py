@@ -186,19 +186,23 @@ def letter_proportions(total):
     order = ['B', 'C', 'A', 'D', 'F']
     return proportions.reindex(order).fillna(0)
 
-
 # ---------------------------------------------------------------------
 # QUESTION 8
 # ---------------------------------------------------------------------
 
 
 def raw_redemption(final_breakdown, question_numbers):
-    scores = final_breakdown.iloc[:, question_numbers]
-    max_scores = scores.max()
-    earned = scores.sum(axis=1)
-    possible = max_scores.sum()
+    cols = [
+        c for c in final_breakdown.columns
+        if any(f"Question {q}" in c for q in question_numbers)
+    ]
+
+    earned = final_breakdown[cols].sum(axis=1)
+    possible = final_breakdown[cols].max().sum()
+
     raw = earned / possible
     raw = raw.fillna(0)
+
     return pd.DataFrame({
         'PID': final_breakdown['PID'],
         'Raw Redemption Score': raw
@@ -218,8 +222,9 @@ def z_score(ser):
 def add_post_redemption(grades_combined):
     out = grades_combined.copy()
 
-    mid_col = out.filter(like='Midterm').columns[0]
-    mid = out[mid_col].fillna(0)
+    mid_raw = out['Midterm'].fillna(0)
+    mid_max = out['Midterm - Max Points'].iloc[0]
+    mid = mid_raw / mid_max
 
     mid_z = z_score(mid)
     red_z = z_score(out['Raw Redemption Score'])
@@ -228,9 +233,7 @@ def add_post_redemption(grades_combined):
     std_mid = mid.std(ddof=0)
 
     redeemed = red_z * std_mid + mean_mid
-
-    post = mid.where(red_z <= mid_z, redeemed)
-    post = post.clip(0, 1)
+    post = mid.where(red_z <= mid_z, redeemed).clip(0, 1)
 
     out['Midterm Score Pre-Redemption'] = mid
     out['Midterm Score Post-Redemption'] = post
@@ -252,8 +255,12 @@ def proportion_improved(grades_combined):
     pre = final_grades(total_points(grades_combined))
     post = final_grades(total_points_post_redemption(grades_combined))
 
-    improved = post.cat.codes > pre.cat.codes
-    return improved.mean()
+    order = {'F': 0, 'D': 1, 'C': 2, 'B': 3, 'A': 4}
+
+    pre_num = pre.map(order)
+    post_num = post.map(order)
+
+    return (post_num > pre_num).mean()
 
 
 # ---------------------------------------------------------------------
