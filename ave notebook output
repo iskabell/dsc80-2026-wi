@@ -1,0 +1,1047 @@
+warning: in the working copy of 'projects/proj01/project.ipynb', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/projects/proj01/project.ipynb b/projects/proj01/project.ipynb[m
+[1mindex 906a008..0e0ce2e 100644[m
+[1m--- a/projects/proj01/project.ipynb[m
+[1m+++ b/projects/proj01/project.ipynb[m
+[36m@@ -2,12 +2,21 @@[m
+  "cells": [[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 2,[m
+[32m+[m[32m   "execution_count": 3,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+    },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "name": "stderr",[m
+[32m+[m[32m     "output_type": "stream",[m
+[32m+[m[32m     "text": [[m
+[32m+[m[32m      "c:\\Users\\isabe\\miniforge3\\envs\\dsc80\\Lib\\site-packages\\otter\\export\\__init__.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\n",[m
+[32m+[m[32m      "  import pkg_resources\n"[m
+[32m+[m[32m     ][m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "# Initialize Otter\n",[m
+     "import otter\n",[m
+[36m@@ -64,7 +73,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 3,[m
+[32m+[m[32m   "execution_count": 4,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -74,7 +83,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 4,[m
+[32m+[m[32m   "execution_count": 5,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -89,7 +98,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 5,[m
+[32m+[m[32m   "execution_count": 6,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -207,7 +216,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 6,[m
+[32m+[m[32m   "execution_count": 7,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[36m@@ -426,7 +435,7 @@[m
+        "[5 rows x 101 columns]"[m
+       ][m
+      },[m
+[31m-     "execution_count": 6,[m
+[32m+[m[32m     "execution_count": 7,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -446,7 +455,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 7,[m
+[32m+[m[32m   "execution_count": 8,[m
+    "metadata": {},[m
+    "outputs": [[m
+     {[m
+[36m@@ -457,7 +466,7 @@[m
+        "      dtype=object)"[m
+       ][m
+      },[m
+[31m-     "execution_count": 7,[m
+[32m+[m[32m     "execution_count": 8,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -505,7 +514,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 10,[m
+[32m+[m[32m   "execution_count": 9,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -542,7 +551,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 11,[m
+[32m+[m[32m   "execution_count": 10,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -557,7 +566,7 @@[m
+        "q1 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 11,[m
+[32m+[m[32m     "execution_count": 10,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -604,7 +613,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 22,[m
+[32m+[m[32m   "execution_count": 11,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -636,7 +645,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 23,[m
+[32m+[m[32m   "execution_count": 12,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -651,7 +660,7 @@[m
+        "q2 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 23,[m
+[32m+[m[32m     "execution_count": 12,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -699,7 +708,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 53,[m
+[32m+[m[32m   "execution_count": 13,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -719,7 +728,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 54,[m
+[32m+[m[32m   "execution_count": 14,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -734,7 +743,7 @@[m
+        "q3 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 54,[m
+[32m+[m[32m     "execution_count": 14,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -764,7 +773,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 47,[m
+[32m+[m[32m   "execution_count": 15,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -786,7 +795,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 48,[m
+[32m+[m[32m   "execution_count": 16,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -801,7 +810,7 @@[m
+        "q4 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 48,[m
+[32m+[m[32m     "execution_count": 16,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -828,7 +837,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 49,[m
+[32m+[m[32m   "execution_count": 17,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -841,7 +850,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 50,[m
+[32m+[m[32m   "execution_count": 18,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -856,7 +865,7 @@[m
+        "q5 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 50,[m
+[32m+[m[32m     "execution_count": 18,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -896,7 +905,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 36,[m
+[32m+[m[32m   "execution_count": 19,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -954,7 +963,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 37,[m
+[32m+[m[32m   "execution_count": 20,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -969,7 +978,7 @@[m
+        "q6 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 37,[m
+[32m+[m[32m     "execution_count": 20,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -1019,7 +1028,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 21,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+[36m@@ -1043,7 +1052,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 52,[m
+[32m+[m[32m   "execution_count": 22,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+[36m@@ -1058,7 +1067,7 @@[m
+        "q7 results: All test cases passed!"[m
+       ][m
+      },[m
+[31m-     "execution_count": 52,[m
+[32m+[m[32m     "execution_count": 22,[m
+      "metadata": {},[m
+      "output_type": "execute_result"[m
+     }[m
+[36m@@ -1123,9 +1132,172 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 80,[m
+[32m+[m[32m   "execution_count": 23,[m
+    "metadata": {},[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/html": [[m
+[32m+[m[32m       "<div>\n",[m
+[32m+[m[32m       "<style scoped>\n",[m
+[32m+[m[32m       "    .dataframe tbody tr th:only-of-type {\n",[m
+[32m+[m[32m       "        vertical-align: middle;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    .dataframe tbody tr th {\n",[m
+[32m+[m[32m       "        vertical-align: top;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    .dataframe thead th {\n",[m
+[32m+[m[32m       "        text-align: right;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "</style>\n",[m
+[32m+[m[32m       "<table border=\"1\" class=\"dataframe\">\n",[m
+[32m+[m[32m       "  <thead>\n",[m
+[32m+[m[32m       "    <tr style=\"text-align: right;\">\n",[m
+[32m+[m[32m       "      <th></th>\n",[m
+[32m+[m[32m       "      <th>PID</th>\n",[m
+[32m+[m[32m       "      <th>Question 1 (5.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 2 (6.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 3 (8.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 4 (6.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 5 (10.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 6 (6.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 7 (10.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 8 (6.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 9 (9.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 10 (10.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 11 (4.0 pts)</th>\n",[m
+[32m+[m[32m       "      <th>Question 12 (7.0 pts)</th>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "  </thead>\n",[m
+[32m+[m[32m       "  <tbody>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>0</th>\n",[m
+[32m+[m[32m       "      <td>A99432453</td>\n",[m
+[32m+[m[32m       "      <td>3.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>8.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>3.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>1</th>\n",[m
+[32m+[m[32m       "      <td>A99152420</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>8.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>10.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>9.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>10.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>2</th>\n",[m
+[32m+[m[32m       "      <td>A99892710</td>\n",[m
+[32m+[m[32m       "      <td>3.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>8.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>3.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>9.0</td>\n",[m
+[32m+[m[32m       "      <td>9.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>7.0</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>3</th>\n",[m
+[32m+[m[32m       "      <td>A99381181</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "      <td>NaN</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>4</th>\n",[m
+[32m+[m[32m       "      <td>A99990217</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>8.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>7.0</td>\n",[m
+[32m+[m[32m       "      <td>6.0</td>\n",[m
+[32m+[m[32m       "      <td>7.0</td>\n",[m
+[32m+[m[32m       "      <td>5.0</td>\n",[m
+[32m+[m[32m       "      <td>9.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>4.0</td>\n",[m
+[32m+[m[32m       "      <td>7.0</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "  </tbody>\n",[m
+[32m+[m[32m       "</table>\n",[m
+[32m+[m[32m       "</div>"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "         PID  Question 1 (5.0 pts)  Question 2 (6.0 pts)  \\\n",[m
+[32m+[m[32m       "0  A99432453                   3.0                   6.0   \n",[m
+[32m+[m[32m       "1  A99152420                   5.0                   6.0   \n",[m
+[32m+[m[32m       "2  A99892710                   3.0                   5.0   \n",[m
+[32m+[m[32m       "3  A99381181                   NaN                   NaN   \n",[m
+[32m+[m[32m       "4  A99990217                   4.0                   6.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "   Question 3 (8.0 pts)  Question 4 (6.0 pts)  Question 5 (10.0 pts)  \\\n",[m
+[32m+[m[32m       "0                   8.0                   5.0                    5.0   \n",[m
+[32m+[m[32m       "1                   8.0                   5.0                   10.0   \n",[m
+[32m+[m[32m       "2                   8.0                   4.0                    4.0   \n",[m
+[32m+[m[32m       "3                   NaN                   NaN                    NaN   \n",[m
+[32m+[m[32m       "4                   8.0                   6.0                    7.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "   Question 6 (6.0 pts)  Question 7 (10.0 pts)  Question 8 (6.0 pts)  \\\n",[m
+[32m+[m[32m       "0                   6.0                    4.0                   3.0   \n",[m
+[32m+[m[32m       "1                   6.0                    9.0                   6.0   \n",[m
+[32m+[m[32m       "2                   5.0                    3.0                   6.0   \n",[m
+[32m+[m[32m       "3                   NaN                    NaN                   NaN   \n",[m
+[32m+[m[32m       "4                   6.0                    7.0                   5.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "   Question 9 (9.0 pts)  Question 10 (10.0 pts)  Question 11 (4.0 pts)  \\\n",[m
+[32m+[m[32m       "0                   4.0                     4.0                    4.0   \n",[m
+[32m+[m[32m       "1                   4.0                    10.0                    4.0   \n",[m
+[32m+[m[32m       "2                   9.0                     9.0                    4.0   \n",[m
+[32m+[m[32m       "3                   NaN                     NaN                    NaN   \n",[m
+[32m+[m[32m       "4                   9.0                     4.0                    4.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "   Question 12 (7.0 pts)  \n",[m
+[32m+[m[32m       "0                    4.0  \n",[m
+[32m+[m[32m       "1                    5.0  \n",[m
+[32m+[m[32m       "2                    7.0  \n",[m
+[32m+[m[32m       "3                    NaN  \n",[m
+[32m+[m[32m       "4                    7.0  "[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 23,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "final_breakdown_fp = Path('data') / 'final_exam_breakdown.csv'\n",[m
+     "final_breakdown = pd.read_csv(final_breakdown_fp)\n",[m
+[36m@@ -1141,9 +1313,20 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 81,[m
+[32m+[m[32m   "execution_count": 24,[m
+    "metadata": {},[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "(535, 13)"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 24,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "final_breakdown.shape"[m
+    ][m
+[36m@@ -1157,9 +1340,21 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 82,[m
+[32m+[m[32m   "execution_count": 25,[m
+    "metadata": {},[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "86   NaN\n",[m
+[32m+[m[32m       "Name: Final, dtype: float64"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 25,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "grades.loc[grades['PID'] == 'A99381181', 'Final']"[m
+    ][m
+[36m@@ -1267,30 +1462,51 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 26,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+    "outputs": [],[m
+[31m-   "source": [][m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "def raw_redemption(final_breakdown, question_numbers):\n",[m
+[32m+[m[32m    "    scores = final_breakdown.iloc[:, question_numbers]\n",[m
+[32m+[m[32m    "    max_scores = scores.max()\n",[m
+[32m+[m[32m    "    earned = scores.sum(axis=1)\n",[m
+[32m+[m[32m    "    possible = max_scores.sum()\n",[m
+[32m+[m[32m    "    raw = earned / possible\n",[m
+[32m+[m[32m    "    raw = raw.fillna(0)\n",[m
+[32m+[m[32m    "    return pd.DataFrame({\n",[m
+[32m+[m[32m    "        'PID': final_breakdown['PID'],\n",[m
+[32m+[m[32m    "        'Raw Redemption Score': raw\n",[m
+[32m+[m[32m    "    })\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "def combine_grades(grades, raw_redemption_scores):\n",[m
+[32m+[m[32m    "    return grades.merge(raw_redemption_scores, on='PID', how='left').fillna({'Raw Redemption Score': 0})"[m
+[32m+[m[32m   ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {[m
+[31m-    "tags": [][m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[31m-   "source": [][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 27,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+    },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/html": [[m
+[32m+[m[32m       "<p><strong><pre style='display: inline;'>q8</pre></strong> passed!</p>"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "q8 results: All test cases passed!"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 27,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "grader.check(\"q8\")"[m
+    ][m
+[36m@@ -1304,9 +1520,230 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 94,[m
+[32m+[m[32m   "execution_count": 28,[m
+    "metadata": {},[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/html": [[m
+[32m+[m[32m       "<div>\n",[m
+[32m+[m[32m       "<style scoped>\n",[m
+[32m+[m[32m       "    .dataframe tbody tr th:only-of-type {\n",[m
+[32m+[m[32m       "        vertical-align: middle;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    .dataframe tbody tr th {\n",[m
+[32m+[m[32m       "        vertical-align: top;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    .dataframe thead th {\n",[m
+[32m+[m[32m       "        text-align: right;\n",[m
+[32m+[m[32m       "    }\n",[m
+[32m+[m[32m       "</style>\n",[m
+[32m+[m[32m       "<table border=\"1\" class=\"dataframe\">\n",[m
+[32m+[m[32m       "  <thead>\n",[m
+[32m+[m[32m       "    <tr style=\"text-align: right;\">\n",[m
+[32m+[m[32m       "      <th></th>\n",[m
+[32m+[m[32m       "      <th>PID</th>\n",[m
+[32m+[m[32m       "      <th>College</th>\n",[m
+[32m+[m[32m       "      <th>Level</th>\n",[m
+[32m+[m[32m       "      <th>Section</th>\n",[m
+[32m+[m[32m       "      <th>lab01</th>\n",[m
+[32m+[m[32m       "      <th>lab01 - Max Points</th>\n",[m
+[32m+[m[32m       "      <th>lab01 - Lateness (H:M:S)</th>\n",[m
+[32m+[m[32m       "      <th>lab02</th>\n",[m
+[32m+[m[32m       "      <th>lab02 - Max Points</th>\n",[m
+[32m+[m[32m       "      <th>lab02 - Lateness (H:M:S)</th>\n",[m
+[32m+[m[32m       "      <th>...</th>\n",[m
+[32m+[m[32m       "      <th>discussion08</th>\n",[m
+[32m+[m[32m       "      <th>discussion08 - Max Points</th>\n",[m
+[32m+[m[32m       "      <th>discussion08 - Lateness (H:M:S)</th>\n",[m
+[32m+[m[32m       "      <th>discussion09</th>\n",[m
+[32m+[m[32m       "      <th>discussion09 - Max Points</th>\n",[m
+[32m+[m[32m       "      <th>discussion09 - Lateness (H:M:S)</th>\n",[m
+[32m+[m[32m       "      <th>discussion10</th>\n",[m
+[32m+[m[32m       "      <th>discussion10 - Max Points</th>\n",[m
+[32m+[m[32m       "      <th>discussion10 - Lateness (H:M:S)</th>\n",[m
+[32m+[m[32m       "      <th>Raw Redemption Score</th>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "  </thead>\n",[m
+[32m+[m[32m       "  <tbody>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>0</th>\n",[m
+[32m+[m[32m       "      <td>A99706914</td>\n",[m
+[32m+[m[32m       "      <td>ERC</td>\n",[m
+[32m+[m[32m       "      <td>JR</td>\n",[m
+[32m+[m[32m       "      <td>A22</td>\n",[m
+[32m+[m[32m       "      <td>99.735279</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>84.990171</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>...</td>\n",[m
+[32m+[m[32m       "      <td>8.895294</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>10.000000</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>780:01:28</td>\n",[m
+[32m+[m[32m       "      <td>10.000000</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>0.844444</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>1</th>\n",[m
+[32m+[m[32m       "      <td>A99237411</td>\n",[m
+[32m+[m[32m       "      <td>Eighth</td>\n",[m
+[32m+[m[32m       "      <td>JR</td>\n",[m
+[32m+[m[32m       "      <td>A29</td>\n",[m
+[32m+[m[32m       "      <td>98.829476</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>50.784231</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>...</td>\n",[m
+[32m+[m[32m       "      <td>9.022407</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>9.020283</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>9.437368</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>0.866667</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>2</th>\n",[m
+[32m+[m[32m       "      <td>A99690544</td>\n",[m
+[32m+[m[32m       "      <td>Revelle</td>\n",[m
+[32m+[m[32m       "      <td>SR</td>\n",[m
+[32m+[m[32m       "      <td>A12</td>\n",[m
+[32m+[m[32m       "      <td>86.513369</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>47.802820</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>...</td>\n",[m
+[32m+[m[32m       "      <td>3.030538</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:04:51</td>\n",[m
+[32m+[m[32m       "      <td>7.613698</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>9.624617</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>0.777778</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>3</th>\n",[m
+[32m+[m[32m       "      <td>A99427381</td>\n",[m
+[32m+[m[32m       "      <td>Seventh</td>\n",[m
+[32m+[m[32m       "      <td>JR</td>\n",[m
+[32m+[m[32m       "      <td>A14</td>\n",[m
+[32m+[m[32m       "      <td>100.000000</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>100.000000</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>...</td>\n",[m
+[32m+[m[32m       "      <td>10.000000</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>9.249126</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>10.000000</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>0.888889</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "    <tr>\n",[m
+[32m+[m[32m       "      <th>4</th>\n",[m
+[32m+[m[32m       "      <td>A99489712</td>\n",[m
+[32m+[m[32m       "      <td>Sixth</td>\n",[m
+[32m+[m[32m       "      <td>JR</td>\n",[m
+[32m+[m[32m       "      <td>A24</td>\n",[m
+[32m+[m[32m       "      <td>66.506974</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>33.422412</td>\n",[m
+[32m+[m[32m       "      <td>100.0</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>...</td>\n",[m
+[32m+[m[32m       "      <td>4.439606</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>4.485291</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>6.282712</td>\n",[m
+[32m+[m[32m       "      <td>10</td>\n",[m
+[32m+[m[32m       "      <td>00:00:00</td>\n",[m
+[32m+[m[32m       "      <td>0.822222</td>\n",[m
+[32m+[m[32m       "    </tr>\n",[m
+[32m+[m[32m       "  </tbody>\n",[m
+[32m+[m[32m       "</table>\n",[m
+[32m+[m[32m       "<p>5 rows × 102 columns</p>\n",[m
+[32m+[m[32m       "</div>"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "         PID  College Level Section       lab01  lab01 - Max Points  \\\n",[m
+[32m+[m[32m       "0  A99706914      ERC    JR     A22   99.735279               100.0   \n",[m
+[32m+[m[32m       "1  A99237411   Eighth    JR     A29   98.829476               100.0   \n",[m
+[32m+[m[32m       "2  A99690544  Revelle    SR     A12   86.513369               100.0   \n",[m
+[32m+[m[32m       "3  A99427381  Seventh    JR     A14  100.000000               100.0   \n",[m
+[32m+[m[32m       "4  A99489712    Sixth    JR     A24   66.506974               100.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "  lab01 - Lateness (H:M:S)       lab02  lab02 - Max Points  \\\n",[m
+[32m+[m[32m       "0                 00:00:00   84.990171               100.0   \n",[m
+[32m+[m[32m       "1                 00:00:00   50.784231               100.0   \n",[m
+[32m+[m[32m       "2                 00:00:00   47.802820               100.0   \n",[m
+[32m+[m[32m       "3                 00:00:00  100.000000               100.0   \n",[m
+[32m+[m[32m       "4                 00:00:00   33.422412               100.0   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "  lab02 - Lateness (H:M:S)  ...  discussion08  discussion08 - Max Points  \\\n",[m
+[32m+[m[32m       "0                 00:00:00  ...      8.895294                         10   \n",[m
+[32m+[m[32m       "1                 00:00:00  ...      9.022407                         10   \n",[m
+[32m+[m[32m       "2                 00:00:00  ...      3.030538                         10   \n",[m
+[32m+[m[32m       "3                 00:00:00  ...     10.000000                         10   \n",[m
+[32m+[m[32m       "4                 00:00:00  ...      4.439606                         10   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "  discussion08 - Lateness (H:M:S)  discussion09  discussion09 - Max Points  \\\n",[m
+[32m+[m[32m       "0                        00:00:00     10.000000                         10   \n",[m
+[32m+[m[32m       "1                        00:00:00      9.020283                         10   \n",[m
+[32m+[m[32m       "2                        00:04:51      7.613698                         10   \n",[m
+[32m+[m[32m       "3                        00:00:00      9.249126                         10   \n",[m
+[32m+[m[32m       "4                        00:00:00      4.485291                         10   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "  discussion09 - Lateness (H:M:S)  discussion10  discussion10 - Max Points  \\\n",[m
+[32m+[m[32m       "0                       780:01:28     10.000000                         10   \n",[m
+[32m+[m[32m       "1                        00:00:00      9.437368                         10   \n",[m
+[32m+[m[32m       "2                        00:00:00      9.624617                         10   \n",[m
+[32m+[m[32m       "3                        00:00:00     10.000000                         10   \n",[m
+[32m+[m[32m       "4                        00:00:00      6.282712                         10   \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "  discussion10 - Lateness (H:M:S)  Raw Redemption Score  \n",[m
+[32m+[m[32m       "0                        00:00:00              0.844444  \n",[m
+[32m+[m[32m       "1                        00:00:00              0.866667  \n",[m
+[32m+[m[32m       "2                        00:00:00              0.777778  \n",[m
+[32m+[m[32m       "3                        00:00:00              0.888889  \n",[m
+[32m+[m[32m       "4                        00:00:00              0.822222  \n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "[5 rows x 102 columns]"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 28,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "grades_combined = combine_grades(grades, raw_redemption(final_breakdown, [1, 2, 3, 7, 9, 12]))\n",[m
+     "grades_combined.head()"[m
+[36m@@ -1348,31 +1785,97 @@[m
+    ][m
+   },[m
+   {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {[m
+[31m-    "tags": [][m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[31m-   "source": [][m
+[32m+[m[32m   "cell_type": "markdown",[m
+[32m+[m[32m   "metadata": {},[m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "### Question 9\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "([return to the outline](#Navigating-the-Project))\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "Now that we have all of our information about each student in one DataFrame, we can compute their z-score on both the original midterm exam and the redemption questions on the final exam.\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "#### `z_score`\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "Complete the implementation of the function `z_score`, which takes in a Series of numbers and returns a Series in which all elements are converted to z-scores. As a reminder, to convert a sequence of numbers to z-scores, or standard units, we use the following formula:\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "$$z(x_i) = \\frac{x_i - \\text{mean of } x}{\\text{SD of }x}$$\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "***Notes***:\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "- Make sure to set the `ddof=0` in whichever method or function you use to compute standard deviation. `numpy` and `pandas` both use different default denominators when computing standard deviation. (`ddof=0` computes the \"population\" standard deviation and `ddof=1` computes the \"sample\" standard deviation.)\n",[m
+[32m+[m[32m    "- Do **not** fill null values – that is, if a value in the input Series is `NaN`, its value in the output Series should also be `NaN`. (Depending on how you implement `z_score`, this may happen automatically.)\n",[m
+[32m+[m[32m    "    - We will address null midterm scores in `add_post_redemption` below, not here in `z_score`.\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "<br>\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "#### `add_post_redemption`\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "Complete the implementation of the function `add_post_redemption`, which takes in a DataFrame like `grades_combined` and returns a DataFrame with all the columns from `grades_combined` in addition to two new columns:\n",[m
+[32m+[m[32m    "- `'Midterm Score Pre-Redemption'`, which contains each student's midterm exam score as a proportion between 0 and 1 **before** redemption.\n",[m
+[32m+[m[32m    "- `'Midterm Score Post-Redemption'`, which containing each student's midterm exam score **after** the redemption policy has been applied, again as a proportion between 0 and 1.\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "You can use your `z_score` function to compute the z-scores of each student's original midterm exam grades and raw redemption scores. **Note that there are students who didn't take the midterm; such students need to have their `NaN` scores fixed prior to calculating their pre-redemption z-scores**, otherwise, you may end up incorrectly giving them `NaN` post-redemption midterm scores. None of the redemption z-scores should be `NaN`, since you handled null values in your implementation of `raw_redemption`.\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "If it's not clear, **computing the `'Midterm Score Post-Redemption'` column is the most complicated part of this question**. Make sure you understand how the redemption policy for DSC 67 works before approaching this question. If you need to refresh your understanding, re-read the instructions at the start of [Part 2](#part2)."[m
+[32m+[m[32m   ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 33,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+    "outputs": [],[m
+[31m-   "source": [][m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "def z_score(ser):\n",[m
+[32m+[m[32m    "    return (ser - ser.mean()) / ser.std(ddof=0)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "def add_post_redemption(grades_combined):\n",[m
+[32m+[m[32m    "    out = grades_combined.copy()\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    mid_col = out.filter(like='Midterm').columns[0]\n",[m
+[32m+[m[32m    "    mid = out[mid_col].fillna(0)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    mid_z = z_score(mid)\n",[m
+[32m+[m[32m    "    red_z = z_score(out['Raw Redemption Score'])\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    mean_mid = mid.mean()\n",[m
+[32m+[m[32m    "    std_mid = mid.std(ddof=0)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    redeemed = red_z * std_mid + mean_mid\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    post = mid.where(red_z <= mid_z, redeemed)\n",[m
+[32m+[m[32m    "    post = post.clip(0, 1)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    out['Midterm Score Pre-Redemption'] = mid\n",[m
+[32m+[m[32m    "    out['Midterm Score Post-Redemption'] = post\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    return out"[m
+[32m+[m[32m   ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 34,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+    },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/html": [[m
+[32m+[m[32m       "<p><strong><pre style='display: inline;'>q9</pre></strong> passed!</p>"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "q9 results: All test cases passed!"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 34,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "grader.check(\"q9\")"[m
+    ][m
+[36m@@ -1406,30 +1909,87 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 57,[m
+    "metadata": {[m
+     "tags": [][m
+    },[m
+    "outputs": [],[m
+[31m-   "source": [][m
+[31m-  },[m
+[31m-  {[m
+[31m-   "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[31m-   "metadata": {[m
+[31m-    "tags": [][m
+[31m-   },[m
+[31m-   "outputs": [],[m
+[31m-   "source": [][m
+[32m+[m[32m   "source": [[m
+[32m+[m[32m    "def total_points_post_redemption(grades_combined):\n",[m
+[32m+[m[32m    "    df = add_post_redemption(grades_combined)\n",[m
+[32m+[m[32m    "    base = total_points(df)\n",[m
+[32m+[m[32m    "    return base - 0.15 * df['Midterm Score Pre-Redemption'] + 0.15 * df['Midterm Score Post-Redemption']\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "def proportion_improved(grades_combined):\n",[m
+[32m+[m[32m    "    pre_total = total_points(grades_combined)\n",[m
+[32m+[m[32m    "    post_total = total_points_post_redemption(grades_combined)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    pre_letters = final_grades(pre_total)\n",[m
+[32m+[m[32m    "    post_letters = final_grades(post_total)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    order = {'F': 0, 'D': 1, 'C': 2, 'B': 3, 'A': 4}\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    pre_num = pre_letters.map(order)\n",[m
+[32m+[m[32m    "    post_num = post_letters.map(order)\n",[m
+[32m+[m[32m    "\n",[m
+[32m+[m[32m    "    return (post_num > pre_num).fillna(False).mean()"[m
+[32m+[m[32m   ][m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": null,[m
+[32m+[m[32m   "execution_count": 58,[m
+    "metadata": {[m
+     "deletable": false,[m
+     "editable": false[m
+    },[m
+[31m-   "outputs": [],[m
+[32m+[m[32m   "outputs": [[m
+[32m+[m[32m    {[m
+[32m+[m[32m     "data": {[m
+[32m+[m[32m      "text/html": [[m
+[32m+[m[32m       "<p><strong style='color: red;'><pre style='display: inline;'>q10</pre> results:</strong></p><p><strong><pre style='display: inline;'>q10 - 1</pre> result:</strong></p><pre>    Test case passed!</pre><p><strong><pre style='display: inline;'>q10 - 2</pre> result:</strong></p><pre>    Test case passed!</pre><p><strong><pre style='display: inline;'>q10 - 3</pre> result:</strong></p><pre>    Trying:\n",[m
+[32m+[m[32m       "        bool(0.07 < proportion_improved(grades_combined) < 0.12)\n",[m
+[32m+[m[32m       "    Expecting:\n",[m
+[32m+[m[32m       "        True\n",[m
+[32m+[m[32m       "    **********************************************************************\n",[m
+[32m+[m[32m       "    Line 1, in q10 2\n",[m
+[32m+[m[32m       "    Failed example:\n",[m
+[32m+[m[32m       "        bool(0.07 < proportion_improved(grades_combined) < 0.12)\n",[m
+[32m+[m[32m       "    Expected:\n",[m
+[32m+[m[32m       "        True\n",[m
+[32m+[m[32m       "    Got:\n",[m
+[32m+[m[32m       "        False\n",[m
+[32m+[m[32m       "</pre><p><strong><pre style='display: inline;'>q10 - 3</pre> message:</strong> Check proportion_improved with public grades_combined</p>"[m
+[32m+[m[32m      ],[m
+[32m+[m[32m      "text/plain": [[m
+[32m+[m[32m       "q10 results:\n",[m
+[32m+[m[32m       "    q10 - 1 result:\n",[m
+[32m+[m[32m       "        Test case passed!\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    q10 - 2 result:\n",[m
+[32m+[m[32m       "        Test case passed!\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    q10 - 3 result:\n",[m
+[32m+[m[32m       "        Trying:\n",[m
+[32m+[m[32m       "            bool(0.07 < proportion_improved(grades_combined) < 0.12)\n",[m
+[32m+[m[32m       "        Expecting:\n",[m
+[32m+[m[32m       "            True\n",[m
+[32m+[m[32m       "        **********************************************************************\n",[m
+[32m+[m[32m       "        Line 1, in q10 2\n",[m
+[32m+[m[32m       "        Failed example:\n",[m
+[32m+[m[32m       "            bool(0.07 < proportion_improved(grades_combined) < 0.12)\n",[m
+[32m+[m[32m       "        Expected:\n",[m
+[32m+[m[32m       "            True\n",[m
+[32m+[m[32m       "        Got:\n",[m
+[32m+[m[32m       "            False\n",[m
+[32m+[m[32m       "\n",[m
+[32m+[m[32m       "    q10 - 3 message: Check proportion_improved with public grades_combined"[m
+[32m+[m[32m      ][m
+[32m+[m[32m     },[m
+[32m+[m[32m     "execution_count": 58,[m
+[32m+[m[32m     "metadata": {},[m
+[32m+[m[32m     "output_type": "execute_result"[m
+[32m+[m[32m    }[m
+[32m+[m[32m   ],[m
+    "source": [[m
+     "grader.check(\"q10\")"[m
+    ][m
+[36m@@ -1457,7 +2017,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 112,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -1479,7 +2039,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 113,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -1488,7 +2048,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 114,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
+[36m@@ -1720,7 +2280,7 @@[m
+   },[m
+   {[m
+    "cell_type": "code",[m
+[31m-   "execution_count": 129,[m
+[32m+[m[32m   "execution_count": null,[m
+    "metadata": {},[m
+    "outputs": [],[m
+    "source": [[m
