@@ -15,13 +15,10 @@ import numpy as np
 
 def read_linkedin_surveys(dirname):
     directory = Path(dirname)
-    
     dfs = []
-    
     for file in directory.iterdir():
         if file.name.startswith("survey") and file.suffix == ".csv":
             df = pd.read_csv(file)
-            
             df.columns = [
                 "first name",
                 "last name",
@@ -30,11 +27,10 @@ def read_linkedin_surveys(dirname):
                 "email",
                 "university"
             ]
-            
+            df["first name"] = df["first name"].str.strip().str.title()
+            df["last name"] = df["last name"].str.strip().str.title()
             dfs.append(df)
-    
-    combined = pd.concat(dfs, ignore_index=True)
-    return combined
+    return pd.concat(dfs, ignore_index=True)
 
 
 def linkedin_stats(df):
@@ -104,13 +100,13 @@ def pet_name_by_owner(owners, pets):
 
 def total_cost_per_city(owners, pets, procedure_history, procedure_detail):
     merged = (
-        owners
-        .merge(pets, on="OwnerID", how="left")
+        pets
+        .merge(owners, on="OwnerID", how="left")
         .merge(procedure_history, on="PetID", how="left")
         .merge(procedure_detail, on=["ProcedureType", "ProcedureSubCode"], how="left")
     )
-    totals = merged.groupby("City")["Price"].sum(min_count=1)
-    return totals.reindex(owners["City"].unique(), fill_value=0)
+    totals = merged.groupby("City")["Price"].sum().fillna(0)
+    return totals
 
 
 # ---------------------------------------------------------------------
