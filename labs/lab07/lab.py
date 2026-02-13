@@ -31,7 +31,7 @@ def match_1(string):
     >>> match_1("1b[#d] _")
     True
     """
-    pattern = ...
+    pattern = r'^..\[..\].*'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -58,7 +58,7 @@ def match_2(string):
     >>> match_2("(858) 456-7890b")
     False
     """
-    pattern = ...
+    pattern = r'^\(858\) \d{3}-\d{4}$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -85,7 +85,7 @@ def match_3(string):
     >>> match_3(" adf!qe? ")
     False
     """
-    pattern = ...
+    pattern = r'^[A-Za-z0-9\s?]{5,9}\?$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -114,7 +114,7 @@ def match_4(string):
     >>> match_4("$!@$")
     False
     """
-    pattern = ...
+    pattern = r'^\$[^$abc]*\$[aA]+[bB]+[cC]+$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -133,7 +133,7 @@ def match_5(string):
     >>> match_5("dsc80+.py")
     False
     """
-    pattern = ...
+    pattern = r'^[A-Za-z0-9_]+\.py$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -154,7 +154,7 @@ def match_6(string):
     >>> match_6("ABCDEF_ABCD")
     False
     """
-    pattern = ...
+    pattern = r'^[a-z]+_[a-z]+$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -173,7 +173,7 @@ def match_7(string):
     >>> match_7("_ncde")
     False
     """
-    pattern = ...
+    pattern = r'^_.*_$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -195,7 +195,7 @@ def match_8(string):
     >>> match_8("ASDJKL9380JKAL")
     True
     """
-    pattern = ...
+    pattern = r'^[^Oi1]+$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -219,7 +219,7 @@ def match_9(string):
     >>> match_9('TX-32-SAN-4491')
     False
     '''
-    pattern = ...
+    pattern = r'^(NY-\d{2}-[A-Z]{3}-\d{4}|CA-\d{2}-(SAN|LAX)-\d{4})$'
 
     # Do not edit following code
     prog = re.compile(pattern)
@@ -241,7 +241,9 @@ def match_10(string):
     ['bde']
     
     '''
-    ...
+    string = string.lower()
+    string = re.sub(r'[^\w]|a', '', string)
+    return re.findall(r'.{3}', string)
 
 
 # ---------------------------------------------------------------------
@@ -250,7 +252,11 @@ def match_10(string):
 
 
 def extract_personal(s):
-    ...
+    emails = re.findall(r'\b[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}\b', s)
+    ssns = re.findall(r'\b\d{3}-\d{2}-\d{4}\b', s)
+    bitcoins = re.findall(r'bitcoin:([A-Za-z0-9]{25,})', s)
+    streets = re.findall(r'\b\d+\s+[A-Za-z]+\s+(?:Street|Lane|Court|Drive|Parkway|Pass|Terrace|Circle|Trail|Road|Crossing|Avenue|Park)\b', s)
+    return (emails, ssns, bitcoins, streets)
 
 
 # ---------------------------------------------------------------------
@@ -259,11 +265,41 @@ def extract_personal(s):
 
 
 def hashtag_list(tweet_text):
-    ...
+    return tweet_text.apply(lambda x: re.findall(r'#(\S+)', x))
 
 def most_common_hashtag(tweet_lists):
-    ...
-
+    exploded = tweet_lists.explode()
+    counts = exploded.value_counts()
+    return tweet_lists.apply(
+        lambda lst: np.nan if len(lst) == 0 
+        else max(lst, key=lambda x: counts.get(x, 0))
+    )
 
 def create_features(tweets):
-    ...
+    texts = tweets['text']
+
+    hashtags = hashtag_list(texts)
+    common = most_common_hashtag(hashtags)
+
+    num_hashtags = hashtags.apply(len)
+    num_tags = texts.apply(lambda x: len(re.findall(r'@[A-Za-z0-9]+', x)))
+    num_links = texts.apply(lambda x: len(re.findall(r'https?://\S+', x)))
+    is_retweet = texts.str.startswith('RT')
+
+    cleaned = texts.copy()
+    cleaned = cleaned.str.replace(r'#\S+', ' ', regex=True)
+    cleaned = cleaned.str.replace(r'@[A-Za-z0-9]+', ' ', regex=True)
+    cleaned = cleaned.str.replace(r'https?://\S+', ' ', regex=True)
+    cleaned = cleaned.str.replace(r'\bRT\b', ' ', regex=True)
+    cleaned = cleaned.str.replace(r'[^A-Za-z0-9 ]', ' ', regex=True)
+    cleaned = cleaned.str.lower()
+    cleaned = cleaned.str.replace(r'\s+', ' ', regex=True).str.strip()
+
+    return pd.DataFrame({
+        'text': cleaned,
+        'num_hashtags': num_hashtags,
+        'common_hashtag': common,
+        'num_tags': num_tags,
+        'num_links': num_links,
+        'is_retweet': is_retweet
+    }, index=tweets.index)
