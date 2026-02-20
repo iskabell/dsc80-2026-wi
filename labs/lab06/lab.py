@@ -198,3 +198,9 @@ def get_comments(storyid):
         dfs(top_comment_id)
     
     return pd.DataFrame(comments)
+
+
+history = stock_history("AAPL", 2019, 2)
+stats = stock_stats(history)
+history_hidden = stock_history("AAPL", 2023, 12)
+stats_hidden = stock_stats(history_hidden)
