@@ -255,7 +255,9 @@ def extract_personal(s):
     emails = re.findall(r'\b[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}\b', s)
     ssns = re.findall(r'\b\d{3}-\d{2}-\d{4}\b', s)
     bitcoins = re.findall(r'bitcoin:([A-Za-z0-9]{25,})', s)
-    streets = re.findall(r'\b\d+\s+[A-Za-z]+\s+(?:Street|Lane|Court|Drive|Parkway|Pass|Terrace|Circle|Trail|Road|Crossing|Avenue|Park)\b', s)
+    streets = re.findall(
+    r'\b\d+\s+[A-Za-z]+(?:\s+[A-Za-z]+)*\s+'
+    r'(Street|Lane|Court|Drive|Parkway|Pass|Terrace|Circle|Trail|Road|Crossing|Avenue|Park|Plaza)\b', s)
     return (emails, ssns, bitcoins, streets)
 
 
