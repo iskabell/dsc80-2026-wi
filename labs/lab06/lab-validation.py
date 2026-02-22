@@ -63,12 +63,6 @@ scrape_books_out = scrape_books(1, ['Mystery'])
 if 'q2' in questions or questions == [] or 'all' in questions:
     print(grader.check("q2"))
 
-def stock_history(symbol, year, month):
-    ...
-
-def stock_stats(history):
-    ...
-
 # don't delete this cell, but do run it -- it is needed for the autograder tests
 
 # public test for stock_history
