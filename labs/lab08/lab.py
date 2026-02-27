@@ -20,6 +20,8 @@ warnings.filterwarnings('ignore')
 
 
 def best_transformation():
+    homeruns_fp = Path('data')/'homeruns.csv'
+    homeruns = pd.read_csv(homeruns_fp)
     df = homeruns
     
     y = df['Home Runs']
