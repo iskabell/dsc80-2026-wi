@@ -20,7 +20,6 @@ from sklearn.compose import ColumnTransformer
 
 
 def simple_pipeline(data):
-    def simple_pipeline(data):
     X = data[['c2']]
     y = data['y']
     
